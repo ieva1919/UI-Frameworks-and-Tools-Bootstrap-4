@@ -4,18 +4,18 @@ import './Header.scss'
 
 function Header() {
     return (
-        <div className="jumbotron">
+        <header className="jumbotron">
             <div className="container">
                 <div className="row row-header">
                     <div className="col-12 col-sm-6">
-                        <h1>It is my furst heading</h1>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur</p>
+                        <h1>Ristorante con Fusion</h1>
+                        <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                     </div>
                     <div className="col-12 col-sm">
                     </div>
                 </div>
             </div>
-        </div>
+        </header>
     )
 }
 

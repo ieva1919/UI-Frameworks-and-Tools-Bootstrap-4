@@ -4,11 +4,11 @@ import './Footer.scss'
 
 function Footer() {
     return (
-        <div className="footer">
+        <footer className="footer">
             <div className="container">
                 <div className="row">
                     <div className="col-4 offset-1 col-sm-2">
-                        <h5>It is my  footer</h5>
+                        <h5>Links</h5>
                         <ul className="list-unstyled">
                             <li><a href="#">Home</a></li>
                             <li><a href="#">About</a></li>
@@ -18,25 +18,33 @@ function Footer() {
                     </div>
                     <div className="col-7 col-sm-5">
                         <h5>Our Address</h5>
-                        <address>The standard chunk of <br />Lorem Ipsum used since<br /> the 1500s is reproduced below <br />for those interested.<br /> the 1500s is reproduced
+                        <address>
+                            121, Clear Water Bay Road<br />
+                                Clear Water Bay, Kowloon<br />
+                                    HONG KONG<br />
+                                        Tel.: +852 1234 5678<br />
+                                            Fax: +852 8765 4321<br />
+                                                Email: <a href="mailto:confusion@food.net">confusion@food.net</a>
                         </address>
                     </div>
                     <div className="col-12 col-sm-4 align-self-center">
                         <div className="text-center">
-                            <a href="#">Google</a>
-                            <a href="#">Twiter</a>
-                            <a href="#">Facebook</a>
-                            <a href="#">Linkedin</a>
+                            <a href="http://google.com/+">Google+</a>
+                            <a href="http://www.facebook.com/profile.php?id=">Facebook</a>
+                            <a href="http://www.linkedin.com/in/">LinkedIn</a>
+                            <a href="http://twitter.com/">Twitter</a>
+                            <a href="http://youtube.com/">YouTube</a>
+                            <a href="mailto:">Mail</a>
                         </div>
                     </div>
                 </div>
                 <div className="row justify-content-center">
                     <div className="col-auto">
-                        <p>Copyright 2020</p>
+                        <p>© Copyright 2018 Ristorante Con Fusion</p>
                     </div>
                 </div>
             </div>
-        </div >
+        </footer>
     )
 }
 
