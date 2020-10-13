@@ -1,10 +1,11 @@
 import React from 'react'
+import './Container.scss'
 
 
 function Container() {
     return (
         <div className="container">
-            <div className="row">
+            <div className="row row-content align-items-center">
                 <div className="col-12 col-sm-4 order-sm-last col-md-3">
                     <h3> This is heading text</h3>
                 </div>
@@ -14,7 +15,7 @@ function Container() {
                     <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,s</p>
                 </div>
             </div>
-            <div className="row">
+            <div className="row row-content align-items-center">
                 <div className="col-12 col-sm-4 col-md-3">
                     <h3> This is heading text</h3>
                 </div>
@@ -24,7 +25,7 @@ function Container() {
                     <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock,s</p>
                 </div>
             </div>
-            <div className="row">
+            <div className="row row-content align-items-center">
                 <div className="col-12 col-sm-4 order-sm-last col-md-3">
                     <h3> This is heading text</h3>
                 </div>
