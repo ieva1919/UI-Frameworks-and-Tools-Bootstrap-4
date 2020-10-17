@@ -1,40 +1,93 @@
 import React from 'react'
 import './Container.scss'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
 
 
 function Container() {
     return (
-        <div>
-            <div className="container">
-                <div className="row">
-                    <div className="col-12 col-sm-4">
-                        <h3>About Us</h3>
-                        <hr />
-                    </div >
-                </div>
+        <Switch>
+            <Route path="/home">
+                <div>
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-12 col-sm-4">
+                                <h3>Our main page</h3>
+                                <hr />
+                            </div >
+                        </div>
 
-                <div className="row row-content align-items-center">
-                    <div className="col-12 col-sm-6">
-                        <h2>Our History</h2>
-                        <p>Started in 2010, Ristorante con Fusion quickly established itself as a culinary icon par excellence in Hong Kong. With its unique brand of world fusion cuisine that can be found nowhere else, it enjoys patronage from the A-list clientele in Hong Kong.  Featuring four of the best three-star Michelin chefs in the world, you never know what will arrive on your plate the next time you visit us.</p>
-                        <p>The restaurant traces its humble beginnings to <em>The Frying Pan</em>, a successful chain started by our CEO, Mr. Peter Pan, that featured for the first time the world's best cuisines in a pan.</p>
+                        <div className="row row-content align-items-center">
+                            <div className="col-12 col-sm-6">
+                                <h2>Our History</h2>
+                                <p>Started in 2010, Ristorante con Fusion quickly established itself as a culinary icon par excellence in Hong Kong. With its unique brand of world fusion cuisine that can be found nowhere else, it enjoys patronage from the A-list clientele in Hong Kong.  Featuring four of the best three-star Michelin chefs in the world, you never know what will arrive on your plate the next time you visit us.</p>
+                                <p>The restaurant traces its humble beginnings to <em>The Frying Pan</em>, a successful chain started by our CEO, Mr. Peter Pan, that featured for the first time the world's best cuisines in a pan.</p>
+                            </div>
+                        </div>
+                        <div className="row row-content align-items-center ">
+                            <div className="col-12">
+                                <h2>Corporate Leadership</h2>
+                                <h3>Peter Pan <small>Chief Epicurious Officer</small></h3>
+                                <p className="d-none d-sm-block">Our CEO, Peter, credits his hardworking East Asian immigrant parents who undertook the arduous journey to the shores of America with the intention of giving their children the best future. His mother's wizardy in the kitchen whipping up the tastiest dishes with whatever is available inexpensively at the supermarket, was his first inspiration to create the fusion cuisines for which <em>The Frying Pan</em> became well known. He brings his zeal for fusion cuisines to this restaurant, pioneering cross-cultural culinary connections.</p>
+                                <h3>Dhanasekaran Witherspoon <small>Chief Food Officer</small></h3>
+                                <p className="d-none d-sm-block">Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established family tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him great appreciation for varieties of food sources. As he puts it in his own words, <em>Everything that runs, wins, and everything that stays, pays!</em></p>
+                                <h3>Agumbe Tang <small>Chief Taste Officer</small></h3>
+                                <p className="d-none d-sm-block">Blessed with the most discerning gustatory sense, Agumbe, our CTO, personally ensures that every dish that we serve meets his exacting tastes. Our chefs dread the tongue lashing that ensues if their dish does not meet his exacting standards. He lives by his motto, <em>You click only if you survive my lick.</em></p>
+                                <h3>Alberto Somayya <small>Executive Chef</small></h3>
+                                <p className="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, <em>Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!</em></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div className="row row-content align-items-center ">
-                    <div className="col-12">
-                        <h2>Corporate Leadership</h2>
-                        <h3>Peter Pan <small>Chief Epicurious Officer</small></h3>
-                        <p className="d-none d-sm-block">Our CEO, Peter, credits his hardworking East Asian immigrant parents who undertook the arduous journey to the shores of America with the intention of giving their children the best future. His mother's wizardy in the kitchen whipping up the tastiest dishes with whatever is available inexpensively at the supermarket, was his first inspiration to create the fusion cuisines for which <em>The Frying Pan</em> became well known. He brings his zeal for fusion cuisines to this restaurant, pioneering cross-cultural culinary connections.</p>
-                        <h3>Dhanasekaran Witherspoon <small>Chief Food Officer</small></h3>
-                        <p className="d-none d-sm-block">Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established family tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him great appreciation for varieties of food sources. As he puts it in his own words, <em>Everything that runs, wins, and everything that stays, pays!</em></p>
-                        <h3>Agumbe Tang <small>Chief Taste Officer</small></h3>
-                        <p className="d-none d-sm-block">Blessed with the most discerning gustatory sense, Agumbe, our CTO, personally ensures that every dish that we serve meets his exacting tastes. Our chefs dread the tongue lashing that ensues if their dish does not meet his exacting standards. He lives by his motto, <em>You click only if you survive my lick.</em></p>
-                        <h3>Alberto Somayya <small>Executive Chef</small></h3>
-                        <p className="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, <em>Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!</em></p>
+            </Route>
+            <Route path="/about">
+                <div>
+                    <div className="container">
+                        <div className="row">
+                            <ol class="col-12 breadcrumb">
+                                <li class="breadcrumb-item"><Link to="/home">Home</Link></li>
+                                <li class="breadcrumb-item active">About Us</li>
+                            </ol>
+                            <div className="col-12 col-sm-4">
+                                <h3>About Us</h3>
+                                <hr />
+                            </div >
+                        </div>
+
+                        <div className="row row-content align-items-center">
+                            <div className="col-12 col-sm-6">
+                                <h2>Our History</h2>
+                                <p>Started in 2010, Ristorante con Fusion quickly established itself as a culinary icon par excellence in Hong Kong. With its unique brand of world fusion cuisine that can be found nowhere else, it enjoys patronage from the A-list clientele in Hong Kong.  Featuring four of the best three-star Michelin chefs in the world, you never know what will arrive on your plate the next time you visit us.</p>
+                                <p>The restaurant traces its humble beginnings to <em>The Frying Pan</em>, a successful chain started by our CEO, Mr. Peter Pan, that featured for the first time the world's best cuisines in a pan.</p>
+                            </div>
+                        </div>
+                        <div className="row row-content align-items-center ">
+                            <div className="col-12">
+                                <h2>Corporate Leadership</h2>
+                                <h3>Peter Pan <small>Chief Epicurious Officer</small></h3>
+                                <p className="d-none d-sm-block">Our CEO, Peter, credits his hardworking East Asian immigrant parents who undertook the arduous journey to the shores of America with the intention of giving their children the best future. His mother's wizardy in the kitchen whipping up the tastiest dishes with whatever is available inexpensively at the supermarket, was his first inspiration to create the fusion cuisines for which <em>The Frying Pan</em> became well known. He brings his zeal for fusion cuisines to this restaurant, pioneering cross-cultural culinary connections.</p>
+                                <h3>Dhanasekaran Witherspoon <small>Chief Food Officer</small></h3>
+                                <p className="d-none d-sm-block">Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established family tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him great appreciation for varieties of food sources. As he puts it in his own words, <em>Everything that runs, wins, and everything that stays, pays!</em></p>
+                                <h3>Agumbe Tang <small>Chief Taste Officer</small></h3>
+                                <p className="d-none d-sm-block">Blessed with the most discerning gustatory sense, Agumbe, our CTO, personally ensures that every dish that we serve meets his exacting tastes. Our chefs dread the tongue lashing that ensues if their dish does not meet his exacting standards. He lives by his motto, <em>You click only if you survive my lick.</em></p>
+                                <h3>Alberto Somayya <small>Executive Chef</small></h3>
+                                <p className="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, <em>Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!</em></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            </Route>
+            <Route path="/menu">
+                {/* <Menu /> */}
+            </Route>
+            <Route path="/contact">
+                {/* <Contact /> */}
+            </Route>
+        </Switch>
     )
 }
 

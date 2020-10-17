@@ -1,47 +1,29 @@
 import React from 'react'
-// import {
-//     BrowserRouter as Router,
-//     Switch,
-//     Route,
-//     Link
-// } from "react-router-dom";
+import { Nav, Navbar } from 'react-bootstrap';
+import {
+    Link
+} from "react-router-dom";
+import "./Menu.scss"
 
 
 function Menu() {
     return (
-        <nav className="navbar navbar-dark navbar-expand-sm bg-primary fixed-top">
+        <Navbar expand="lg" className="navbar-dark">
             <div className="container">
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
-                    <span className="navbar-toggler-icon">
-                    </span>
-                </button>
-                <a className="navbar-brand mr-auto" href="#"> Ristorante Con Furion</a>
-                <div className="collapse navbar-collapse" id="Navbar">
-                    <ul className="navbar-nav mr-auto">
-                        <li className="nav-item active"><a className="nav-link" href="#">Home</a></li>
-                        <li className="nav-item"><a className="nav-link" href="#">About</a></li>
-                        <li className="nav-item"><a className="nav-link" href="#">Menu</a></li>
-                        <li className="nav-item"><a className="nav-link" href="#">Contact</a></li>
-                    </ul>
-                    {/* <Router>
-                        <Switch>
-                            <Route path="/home">
-                                {/* <Home /> */}
-                    {/* </Route>
-                            <Route path="/about"> */}
-                    {/* <About /> */}
-                    {/* </Route>
-                            <Route path="/menu"> */}
-                    {/* <Menu /> */}
-                    {/* </Route>
-                            <Route path="/contact"> */}
-                    {/* <Contact /> */}
-                    {/* </Route>
-                        </Switch>
-                    </Router> */}
-                </div>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                    <Link to="/">
+                        <Navbar.Brand> Ristorante Con Furion</Navbar.Brand>
+                    </Link>
+                    <Nav >
+                        <Nav.Link className="nav-item "><Link className="nav-link" to="/home">Home</Link></Nav.Link>
+                        <Nav.Link className="nav-item"><Link className="nav-link" to="/about">About</Link></Nav.Link>
+                        <Nav.Link className="nav-item"><Link className="nav-link" to="/menu">Menu</Link></Nav.Link>
+                        <Nav.Link className="nav-item"><Link className="nav-link" to="/contact">Contact</Link></Nav.Link>
+                    </Nav >
+                </Navbar.Collapse>
             </div>
-        </nav>
+        </Navbar >
     )
 }
 
