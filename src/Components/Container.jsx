@@ -9,6 +9,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faFax, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faSkype } from '@fortawesome/free-brands-svg-icons'
+import { Form } from 'react-bootstrap';
 
 
 function Container() {
@@ -131,15 +132,70 @@ function Container() {
                                 <h3>Send us your Feedback</h3>
                             </div>
                             <div className="col-12 col-md-9">
-                                Form goes here
-            </div>
+                                <Form>
+                                    <Form.Group controlId="firstname" className="row">
+                                        <Form.Label for="firstname" class="col-md-2 col-form-label">First Name</Form.Label>
+                                        <div class="col-md-10">
+                                            <Form.Control type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name" />
+                                        </div>
+                                    </Form.Group>
+                                    <Form.Group controlId="lastname" className="row">
+                                        <Form.Label for="lastname" class="col-md-2 col-form-label">Last Name</Form.Label>
+                                        <div class="col-md-10">
+                                            <Form.Control type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name" />
+                                        </div>
+                                    </Form.Group >
+                                    <Form.Group controlId="telnum" className="row">
+                                        <Form.Label for="telnum" class="col-12 col-md-2 col-form-label">Contact Tel.</Form.Label>
+                                        <div class="col-5 col-md-3">
+                                            <Form.Control type="tel" class="form-control" id="areacode" name="areacode" placeholder="Area code" />
+                                        </div>
+                                        <div class="col-7 col-md-7">
+                                            <Form.Control type="tel" class="form-control" id="telnum" name="telnum" placeholder="Tel. number" />
+                                        </div>
+                                    </Form.Group>
+                                    <Form.Group controlId="telnum" className="row">
+                                        <Form.Label for="emailid" class="col-md-2 col-form-label"> Email</Form.Label>
+                                        <div class="col-md-10">
+                                            <Form.Control type="email" class="form-control" id="emailid" name="emailid" placeholder="Email" />
+                                        </div>
+                                    </Form.Group>
+                                    <Form.Group className="row">
+                                        <div class="col-md-6 offset-md-2">
+                                            <div class="form-check">
+                                                <Form.Control type="checkbox" class="form-check-input" name="approve" id="approve" value="" />
+                                                <Form.Label class="form-check-label" for="approve">
+                                                    <strong>May we contact you?</strong>
+                                                </Form.Label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-3 offset-md-1">
+                                            <Form.Control as="select">
+                                                <option>Tel.</option>
+                                                <option>Email</option>
+                                            </Form.Control>
+                                        </div>
+                                    </Form.Group>
+                                    <Form.Group className="row">
+                                        <Form.Label for="feedback" class="col-md-2 col-form-label">Your Feedback</Form.Label>
+                                        <div class="col-md-10">
+                                            <Form.Control as="textarea" class="form-control" id="feedback" name="feedback" rows="12"></Form.Control>
+                                        </div>
+                                    </Form.Group>
+                                    <Form.Group className="row">
+                                        <div class="offset-md-2 col-md-10">
+                                            <button type="submit" class="btn btn-primary">Send Feedback</button>
+                                        </div>
+                                    </Form.Group >
+                                </Form>
+                            </div>
                             <div className="col-12 col-md">
                             </div>
                         </div>
                     </div>
                 </div>
             </Route>
-        </Switch>
+        </Switch >
     )
 }
 
