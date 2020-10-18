@@ -6,12 +6,15 @@ import {
     Route,
     Link
 } from "react-router-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhone, faFax, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faSkype } from '@fortawesome/free-brands-svg-icons'
 
 
 function Container() {
     return (
         <Switch>
-            <Route path="/">
+            <Route exact path="/">
                 <div>
                     <div className="container">
                         <div className="row">
@@ -85,7 +88,56 @@ function Container() {
                 {/* <Menu /> */}
             </Route>
             <Route path="/contact">
-                {/* <Contact /> */}
+                <div>
+                    <div className="container">
+                        <div className="row">
+                            <ol className="col-12 breadcrumb">
+                                <li className="breadcrumb-item"><a href="/home">Home</a></li>
+                                <li className="breadcrumb-item active">Contact Us</li>
+                            </ol>
+                            <div className="col-12">
+                                <h3>Contact Us</h3>
+                                <hr />
+                            </div>
+                        </div>
+                        <div className="row row-content">
+                            <div className="col-12">
+                                <h3>Location Information</h3>
+                            </div>
+                            <div className="col-12 col-sm-4 offset-sm-1">
+                                <h5>Our Address</h5>
+                                <address>
+                                    121, Clear Water Bay Road<br />
+                                Clear Water Bay, Kowloon<br />
+                                    HONG KONG<br />
+                                    <FontAwesomeIcon icon={faPhone} className="mr-2" /> +852 1234 5678<br />
+                                    <FontAwesomeIcon icon={faFax} className="mr-2" />  +852 8765 4321<br />
+                                    <FontAwesomeIcon icon={faEnvelope} className="mr-2" />  <a href="mailto:confusion@food.net">confusion@food.net</a>
+                                </address>
+                            </div>
+                            <div className="col-12 col-sm-6 offset-sm-1">
+                                <h5>Map of our Location</h5>
+                            </div>
+                            <div className="col-12 col-sm-11 offset-sm-1">
+                                <div className="btn-group" role="group">
+                                    <a role="button" class="btn btn-primary" href="tel:+85212345678"><FontAwesomeIcon icon={faPhone} className="mr-2" /> Call</a>
+                                    <a role="button" class="btn btn-info"><FontAwesomeIcon icon={faSkype} className="mr-2" /> Skype</a>
+                                    <a role="button" class="btn btn-success" href="mailto:confusion@food.net"><FontAwesomeIcon icon={faEnvelope} className="mr-2" /> Email</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row row-content">
+                            <div className="col-12">
+                                <h3>Send us your Feedback</h3>
+                            </div>
+                            <div className="col-12 col-md-9">
+                                Form goes here
+            </div>
+                            <div className="col-12 col-md">
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </Route>
         </Switch>
     )

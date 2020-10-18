@@ -14,7 +14,7 @@ import { faAddressCard } from '@fortawesome/free-solid-svg-icons'
 
 function Menu() {
     return (
-        <Navbar expand="lg" className="navbar-dark">
+        <Navbar expand="lg" className="navbar-dark" fixed="top">
             <div className="container">
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
@@ -22,10 +22,10 @@ function Menu() {
                         <Navbar.Brand> Ristorante Con Furion</Navbar.Brand>
                     </Link>
                     <Nav >
-                        <Link className="nav-link" to="/"><Nav.Link className="nav-item"><FontAwesomeIcon icon={faHome} className="mr-2" />Home</Nav.Link></Link>
-                        <Link className="nav-link" to="/about"><Nav.Link className="nav-item"><FontAwesomeIcon icon={faInfo} className="mr-2" />About</Nav.Link></Link>
-                        <Link className="nav-link" to="/menu"><Nav.Link className="nav-item"><FontAwesomeIcon icon={faList} className="mr-2" />Menu</Nav.Link></Link>
-                        <Link className="nav-link" to="/contact"><Nav.Link className="nav-item"><FontAwesomeIcon icon={faAddressCard} className="mr-2" />Contact</Nav.Link></Link>
+                        <Nav.Link as={Link} to="/" className="nav-item"><FontAwesomeIcon icon={faHome} className="mr-2" />Home</Nav.Link>
+                        <Nav.Link as={Link} to="/about" className="nav-item"><FontAwesomeIcon icon={faInfo} className="mr-2" />About</Nav.Link>
+                        <Nav.Link as={Link} to="/menu" className="nav-item"><FontAwesomeIcon icon={faList} className="mr-2" />Menu</Nav.Link>
+                        <Nav.Link as={Link} to="/contact" className="nav-item"><FontAwesomeIcon icon={faAddressCard} className="mr-2" />Contact</Nav.Link>
                     </Nav >
                 </Navbar.Collapse>
             </div>
