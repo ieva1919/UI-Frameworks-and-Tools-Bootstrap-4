@@ -14,7 +14,8 @@ function Header() {
                             <h1>Ristorante con Fusion</h1>
                             <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                         </div>
-                        <div className="col-12 col-sm">
+                        <div className="col-12 col-sm align-self-center">
+                            <img src="img/logo.png" className="img-fluid" />
                         </div>
                     </div>
                 </div>

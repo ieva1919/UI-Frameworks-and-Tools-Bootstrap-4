@@ -19,7 +19,7 @@ function Menu() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Link to="/">
-                        <Navbar.Brand> Ristorante Con Furion</Navbar.Brand>
+                        <Navbar.Brand> <img src="img/logo.png" height="30" width="41" /></Navbar.Brand>
                     </Link>
                     <Nav >
                         <Nav.Link as={Link} to="/" className="nav-item"><FontAwesomeIcon icon={faHome} className="mr-2" />Home</Nav.Link>
