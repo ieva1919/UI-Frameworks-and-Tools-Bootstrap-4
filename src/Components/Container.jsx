@@ -9,7 +9,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faFax, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faSkype } from '@fortawesome/free-brands-svg-icons'
-import { Card, Form, Table } from 'react-bootstrap';
+import { Card, Col, Row, Form, Table } from 'react-bootstrap';
 
 
 function Container() {
@@ -17,57 +17,110 @@ function Container() {
         <Switch>
             <Route exact path="/">
                 <div>
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-12 col-sm-4">
-                                <h3>Our main page</h3>
-                                <hr />
-                            </div >
-                        </div>
-
-                        <div className="row row-content align-items-center">
-                            <div className="col-12">
-                                <div className="media">
-                                    <img className="d-flex mr-3 img-thumbnail align-self-center"
-                                        src="img/uthappizza.png" alt="Uthappizza" />
-                                    <div className="media-body">
-                                        <h2 class="mt-0">Uthappizza</h2>
-                                        <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
-                                        Italian pizza, topped with Cerignola olives, ripe vine
-                                        cherry tomatoes, Vidalia onion, Guntur chillies and
+                    <div className="margin">
+                        <div className="container">
+                            <div className="row">
+                                <div className="col-12 col-sm-4">
+                                    <h3>Our main page</h3>
+                                    <hr />
+                                </div >
+                            </div>
+                            <div className="row row-content align-items-center">
+                                <div class="col-12 order-last col-sm-3">
+                                    <h4>Our Lipsmaking Culinary Creation</h4>
+                                </div>
+                                <div className="col-12 order-first col-sm-9">
+                                    <div className="media">
+                                        <img className="d-flex mr-3 img-thumbnail align-self-center"
+                                            src="img/uthappizza.png" alt="Uthappizza" />
+                                        <div className="media-body">
+                                            <h2 class="mt-0">Uthappizza <span className="badge badge-danger">HOT</span><span class="badge badge-pill badge-secondary">$4.99</span></h2>
+                                            <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
+                                            Italian pizza, topped with Cerignola olives, ripe vine
+                                            cherry tomatoes, Vidalia onion, Guntur chillies and
                             Buffalo Paneer.</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="media">
+                            </div>
+                            <div className="row row-content align-items-center">
+                                <div class="col-12 col-sm-3">
+                                    <h4>This Month's Promotions</h4>
+                                </div>
+                                <div class="col-6 col-sm-6">
+                                    <div className="media">
+                                        <div className="media-body">
+                                            <h2 class="mt-0">Weekend grand buffet <span className="badge badge-danger">NEW</span></h2>
+                                            <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
+                                            Italian pizza, topped with Cerignola olives, ripe vine
+                                            cherry tomatoes, Vidalia onion, Guntur chillies and
+                            Buffalo Paneer.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-sm-3">
                                     <img className="d-flex mr-3 img-thumbnail align-self-center"
-                                        src="img/alberto.png" alt="Alberto Somayya" />
-                                    <div className="media-body">
-                                        <h2 className="mt-0">Alberto Somayya</h2>
-                                        <h4>Executive Chef</h4>
-                                        <p className="d-none d-sm-block">Award winning three-star Michelin chef with wide
-                                        International experience having worked closely with
-                                        whos-who in the culinary world, he specializes in
-                                        creating mouthwatering Indo-Italian fusion experiences.
+                                        src="img/buffet.png" alt="buffet" />
+                                </div>
+                            </div>
+                            <div className="row row-content align-items-center">
+                                <div class="col-12 col-sm-3 order-last">
+                                    <h4>Meet our culinary specialist</h4>
+                                </div>
+                                <div className="col-12 col-sm-9 order-first">
+                                    <div className="media">
+                                        <img className="d-flex mr-3 img-thumbnail align-self-center"
+                                            src="img/alberto.png" alt="Alberto Somayya" />
+                                        <div className="media-body">
+                                            <h2 className="mt-0">Alberto Somayya</h2>
+                                            <h4>Executive Chef</h4>
+                                            <p className="d-none d-sm-block">Award winning three-star Michelin chef with wide
+                                            International experience having worked closely with
+                                            whos-who in the culinary world, he specializes in
+                                            creating mouthwatering Indo-Italian fusion experiences.
                             </p>
+                                        </div>
                                     </div>
                                 </div>
-                                <h2>Our History</h2>
-                                <p>Started in 2010, Ristorante con Fusion quickly established itself as a culinary icon par excellence in Hong Kong. With its unique brand of world fusion cuisine that can be found nowhere else, it enjoys patronage from the A-list clientele in Hong Kong.  Featuring four of the best three-star Michelin chefs in the world, you never know what will arrive on your plate the next time you visit us.</p>
-                                <p>The restaurant traces its humble beginnings to <em>The Frying Pan</em>, a successful chain started by our CEO, Mr. Peter Pan, that featured for the first time the world's best cuisines in a pan.</p>
                             </div>
-                        </div>
-                        <div className="row row-content align-items-center ">
-                            <div className="col-12">
-                                <h2>Corporate Leadership</h2>
-                                <h3>Peter Pan <small>Chief Epicurious Officer</small></h3>
-                                <p className="d-none d-sm-block">Our CEO, Peter, credits his hardworking East Asian immigrant parents who undertook the arduous journey to the shores of America with the intention of giving their children the best future. His mother's wizardy in the kitchen whipping up the tastiest dishes with whatever is available inexpensively at the supermarket, was his first inspiration to create the fusion cuisines for which <em>The Frying Pan</em> became well known. He brings his zeal for fusion cuisines to this restaurant, pioneering cross-cultural culinary connections.</p>
-                                <h3>Dhanasekaran Witherspoon <small>Chief Food Officer</small></h3>
-                                <p className="d-none d-sm-block">Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established family tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him great appreciation for varieties of food sources. As he puts it in his own words, <em>Everything that runs, wins, and everything that stays, pays!</em></p>
-                                <h3>Agumbe Tang <small>Chief Taste Officer</small></h3>
-                                <p className="d-none d-sm-block">Blessed with the most discerning gustatory sense, Agumbe, our CTO, personally ensures that every dish that we serve meets his exacting tastes. Our chefs dread the tongue lashing that ensues if their dish does not meet his exacting standards. He lives by his motto, <em>You click only if you survive my lick.</em></p>
-                                <h3>Alberto Somayya <small>Executive Chef</small></h3>
-                                <p className="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, <em>Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!</em></p>
-                            </div>
+                            <Card id="reservetable">
+                                <Card.Header className="warning"><strong>Reserve a Table </strong></Card.Header>
+                                <Card.Body>
+                                    <Card.Text>
+                                        <Form>
+                                            <Form.Group as={Row} className="my-4">
+                                                <Form.Label column sm={2}>Number of Guest</Form.Label>
+                                                <Col sm={10}>
+                                                    {['radio'].map((type) => (
+                                                        <div key={`inline-${type}`} className="mb-3">
+                                                            <Form.Check inline label="1" type={type} id={`inline-${type}-1`} />
+                                                            <Form.Check inline label="2" type={type} id={`inline-${type}-1`} />
+                                                            <Form.Check inline label="3" type={type} id={`inline-${type}-1`} />
+                                                            <Form.Check inline label="4" type={type} id={`inline-${type}-1`} />
+                                                            <Form.Check inline label="5" type={type} id={`inline-${type}-1`} />
+                                                            <Form.Check inline label="6" type={type} id={`inline-${type}-1`} />
+                                                        </div>
+                                                    ))}
+                                                </Col>
+                                            </Form.Group>
+                                            <Form.Group as={Row} className="my-4">
+                                                <Form.Label column sm={2}>Date and Time</Form.Label>
+                                                <Col sm={2}>
+                                                    <Form.Control type="date" name="date" placeholder="Date" />
+                                                </Col>
+                                                <Col sm={2}>
+                                                    <Form.Control type="number" name="time" placeholder="Time" />
+                                                </Col>
+                                            </Form.Group>
+                                            <Form.Group className="row">
+                                                <div class="offset-md-2 col-md-10">
+                                                    <button type="submit" class="btn btn-primary">Reserve</button>
+                                                </div>
+                                            </Form.Group >
+                                        </Form>
+                                    </Card.Text>
+                                </Card.Body>
+                            </Card>
                         </div>
                     </div>
                 </div>
@@ -136,15 +189,15 @@ function Container() {
                                 <p className="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, <em>Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!</em></p>
                             </div>
                         </div>
-                        <div class="row row-content">
-                            <div class="col-12 col-sm-9">
+                        <div className="row row-content">
+                            <div className="col-12 col-sm-9">
                                 <h2>Facts &amp; Figures</h2>
                             </div>
-                            <div class="col-12 col-sm-3">
+                            <div className="col-12 col-sm-3">
                             </div>
                         </div>
                         <Table striped bordered hover responsive>
-                            <thead class="thead-dark">
+                            <thead className="thead-dark">
                                 <tr>
                                     <th>&nbsp;</th>
                                     <th>2013</th>
