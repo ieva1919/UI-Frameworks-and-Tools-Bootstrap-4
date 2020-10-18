@@ -9,7 +9,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faFax, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faSkype } from '@fortawesome/free-brands-svg-icons'
-import { Form } from 'react-bootstrap';
+import { Card, Form, Table } from 'react-bootstrap';
 
 
 function Container() {
@@ -61,13 +61,43 @@ function Container() {
                                 <hr />
                             </div >
                         </div>
-
                         <div className="row row-content align-items-center">
                             <div className="col-12 col-sm-6">
                                 <h2>Our History</h2>
                                 <p>Started in 2010, Ristorante con Fusion quickly established itself as a culinary icon par excellence in Hong Kong. With its unique brand of world fusion cuisine that can be found nowhere else, it enjoys patronage from the A-list clientele in Hong Kong.  Featuring four of the best three-star Michelin chefs in the world, you never know what will arrive on your plate the next time you visit us.</p>
                                 <p>The restaurant traces its humble beginnings to <em>The Frying Pan</em>, a successful chain started by our CEO, Mr. Peter Pan, that featured for the first time the world's best cuisines in a pan.</p>
                             </div>
+                            <div className="col-12 col-sm-6">
+                                <Card >
+                                    <h3 className="card-header bg-primary text-white">Facts At a Glance</h3>
+                                    <div className="card-body">
+                                        <dl className="row">
+                                            <dt className="col-6">Started</dt>
+                                            <dd className="col-6">3 Feb. 2013</dd>
+                                            <dt className="col-6">Major Stake Holder</dt>
+                                            <dd className="col-6">HK Fine Foods Inc.</dd>
+                                            <dt className="col-6">Last Year's Turnover</dt>
+                                            <dd className="col-6">$1,250,375</dd>
+                                            <dt className="col-6">Employees</dt>
+                                            <dd className="col-6">40</dd>
+                                        </dl>
+                                    </div>
+                                </Card >
+                            </div>
+                            <Card className="col-12">
+                                <Card.Body>
+                                    <blockquote className="blockquote mb-0">
+                                        <p>
+                                            {' '}
+                                            You better cut the pizza in four pieces because I'm not hungry enough to eat six.{' '}
+                                        </p>
+                                        <footer class="blockquote-footer">Yogi Berra,
+                            <cite title="Source Title">The Wit and Wisdom of Yogi Berra,
+                            P. Pepe, Diversion Books, 2014</cite>
+                                        </footer>
+                                    </blockquote>
+                                </Card.Body>
+                            </Card>
                         </div>
                         <div className="row row-content align-items-center ">
                             <div className="col-12">
@@ -82,6 +112,49 @@ function Container() {
                                 <p className="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, <em>Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!</em></p>
                             </div>
                         </div>
+                        <div class="row row-content">
+                            <div class="col-12 col-sm-9">
+                                <h2>Facts &amp; Figures</h2>
+                            </div>
+                            <div class="col-12 col-sm-3">
+                            </div>
+                        </div>
+                        <Table striped bordered hover responsive>
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>&nbsp;</th>
+                                    <th>2013</th>
+                                    <th>2014</th>
+                                    <th>2015</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Employees</th>
+                                    <td>15</td>
+                                    <td>30</td>
+                                    <td>40</td>
+                                </tr>
+                                <tr>
+                                    <th>Guests Served</th>
+                                    <td>15000</td>
+                                    <td>45000</td>
+                                    <td>100,000</td>
+                                </tr>
+                                <tr>
+                                    <th>Special Events</th>
+                                    <td>3</td>
+                                    <td>20</td>
+                                    <td>45</td>
+                                </tr>
+                                <tr>
+                                    <th>Annual Turnover</th>
+                                    <td>$251,325</td>
+                                    <td>$1,250,375</td>
+                                    <td>~$3,000,000</td>
+                                </tr>
+                            </tbody>
+                        </Table>
                     </div>
                 </div>
             </Route>
