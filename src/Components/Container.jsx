@@ -11,7 +11,7 @@ import {
 function Container() {
     return (
         <Switch>
-            <Route path="/home">
+            <Route path="/">
                 <div>
                     <div className="container">
                         <div className="row">

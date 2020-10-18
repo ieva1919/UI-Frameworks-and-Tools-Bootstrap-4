@@ -1,5 +1,8 @@
 import React from 'react'
 import './Footer.scss'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPhone, faFax, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faGooglePlus, faFacebook, faLinkedin, faTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons'
 
 
 function Footer() {
@@ -22,19 +25,19 @@ function Footer() {
                             121, Clear Water Bay Road<br />
                                 Clear Water Bay, Kowloon<br />
                                     HONG KONG<br />
-                                        Tel.: +852 1234 5678<br />
-                                            Fax: +852 8765 4321<br />
-                                                Email: <a href="mailto:confusion@food.net">confusion@food.net</a>
+                            <FontAwesomeIcon icon={faPhone} className="mr-2" /> +852 1234 5678<br />
+                            <FontAwesomeIcon icon={faFax} className="mr-2" />  +852 8765 4321<br />
+                            <FontAwesomeIcon icon={faEnvelope} className="mr-2" />  <a href="mailto:confusion@food.net">confusion@food.net</a>
                         </address>
                     </div>
                     <div className="col-12 col-sm-4 align-self-center">
                         <div className="text-center">
-                            <a href="http://google.com/+">Google+</a>
-                            <a href="http://www.facebook.com/profile.php?id=">Facebook</a>
-                            <a href="http://www.linkedin.com/in/">LinkedIn</a>
-                            <a href="http://twitter.com/">Twitter</a>
-                            <a href="http://youtube.com/">YouTube</a>
-                            <a href="mailto:">Mail</a>
+                            <span className="specificitygoogle"><a href="http://google.com/+"><FontAwesomeIcon icon={faGooglePlus} className="mr-2" /></a></span>
+                            <span className="specificityfacebook"><a href="http://www.facebook.com/profile.php?id="><FontAwesomeIcon icon={faFacebook} className="mr-2" /></a></span>
+                            <span className="specificitylinkedin"><a href="http://www.linkedin.com/in/"><FontAwesomeIcon icon={faLinkedin} className="mr-2" /></a></span>
+                            <span className="specificitytwitter"><a href="http://twitter.com/"><FontAwesomeIcon icon={faTwitter} className="mr-2" /></a></span>
+                            <span className="specificityyoutube"><a href="http://youtube.com/"><FontAwesomeIcon icon={faYoutube} className="mr-2" /></a></span>
+                            <span className="specificityenvelop"><a href="mailto:"><FontAwesomeIcon icon={faEnvelope} className="mr-2" /></a></span>
                         </div>
                     </div>
                 </div>
