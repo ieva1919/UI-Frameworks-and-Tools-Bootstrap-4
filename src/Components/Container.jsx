@@ -9,7 +9,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faFax, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faSkype } from '@fortawesome/free-brands-svg-icons'
-import { Card, Col, Row, Form, Table, Tabs, Tab } from 'react-bootstrap';
+import { Card, Col, Row, Form, Table, Tabs, Tab, Accordion, Button } from 'react-bootstrap';
 
 
 function Container() {
@@ -81,6 +81,66 @@ function Container() {
                             </p>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                            <div className="row row-content align-items-center ">
+                                <div className="col-12">
+                                    <h2>Corporate Leadership</h2>
+                                    <br />
+                                    <Accordion defaultActiveKey="0">
+                                        <Card>
+                                            <Card.Header>
+                                                <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                                                    <h3>Peter Pan <small>Chief Epicurious Officer</small></h3>
+                                                </Accordion.Toggle>
+                                            </Card.Header>
+                                            <Accordion.Collapse eventKey="0">
+                                                <Card.Body>
+                                                    <br />
+                                                    <p className="d-none d-sm-block">Our CEO, Peter, credits his hardworking East Asian immigrant parents who undertook the arduous journey to the shores of America with the intention of giving their children the best future. His mother's wizardy in the kitchen whipping up the tastiest dishes with whatever is available inexpensively at the supermarket, was his first inspiration to create the fusion cuisines for which <em>The Frying Pan</em> became well known. He brings his zeal for fusion cuisines to this restaurant, pioneering cross-cultural culinary connections.</p>
+                                                </Card.Body>
+                                            </Accordion.Collapse>
+                                        </Card>
+                                        <Card>
+                                            <Card.Header>
+                                                <Accordion.Toggle as={Button} variant="link" eventKey="1">
+                                                    <h3>Dhanasekaran Witherspoon <small>Chief Food Officer</small></h3>
+                                                </Accordion.Toggle>
+                                            </Card.Header>
+                                            <Accordion.Collapse eventKey="1">
+                                                <Card.Body>
+                                                    <br />
+                                                    <p className="d-none d-sm-block">Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established family tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him great appreciation for varieties of food sources. As he puts it in his own words, <em>Everything that runs, wins, and everything that stays, pays!</em></p>
+                                                </Card.Body>
+                                            </Accordion.Collapse>
+                                        </Card>
+                                        <Card>
+                                            <Card.Header>
+                                                <Accordion.Toggle as={Button} variant="link" eventKey="2">
+                                                    <h3>Agumbe Tang <small>Chief Taste Officer</small></h3>
+                                                </Accordion.Toggle>
+                                            </Card.Header>
+                                            <Accordion.Collapse eventKey="2">
+                                                <Card.Body>
+                                                    <br />
+                                                    <p className="d-none d-sm-block">Blessed with the most discerning gustatory sense, Agumbe, our CTO, personally ensures that every dish that we serve meets his exacting tastes. Our chefs dread the tongue lashing that ensues if their dish does not meet his exacting standards. He lives by his motto, <em>You click only if you survive my lick.</em></p>
+                                                </Card.Body>
+                                            </Accordion.Collapse>
+                                        </Card>
+                                        <Card>
+                                            <Card.Header>
+                                                <Accordion.Toggle as={Button} variant="link" eventKey="3">
+                                                    <h3>Alberto Somayya <small>Executive Chef</small></h3>
+                                                </Accordion.Toggle>
+                                            </Card.Header>
+                                            <Accordion.Collapse eventKey="3">
+                                                <Card.Body>
+                                                    <br />
+                                                    <p className="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, <em>Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!</em></p>
+                                                </Card.Body>
+                                            </Accordion.Collapse>
+                                        </Card>
+                                    </Accordion>
                                 </div>
                             </div>
                             <Card id="reservetable">
@@ -195,7 +255,7 @@ function Container() {
                                         <h3>Agumbe Tang <small>Chief Taste Officer</small></h3>
                                         <p className="d-none d-sm-block">Blessed with the most discerning gustatory sense, Agumbe, our CTO, personally ensures that every dish that we serve meets his exacting tastes. Our chefs dread the tongue lashing that ensues if their dish does not meet his exacting standards. He lives by his motto, <em>You click only if you survive my lick.</em></p>
                                     </Tab>
-                                    <Tab eventKey="alberto" title="Alberto Somayya, Exec. Chef<">
+                                    <Tab eventKey="alberto" title="Alberto Somayya, Exec. Chef">
                                         <br />
                                         <h3>Alberto Somayya <small>Executive Chef</small></h3>
                                         <p className="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, <em>Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!</em></p>

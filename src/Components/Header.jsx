@@ -1,10 +1,13 @@
-import React from 'react'
-import { Button } from 'react-bootstrap';
+import React, { useRef, useState } from 'react'
+import { Button, Overlay, Tooltip } from 'react-bootstrap';
 import './Header.scss'
 import Menu from './Menu'
 
 
 function Header() {
+    const [show, setShow] = useState(false);
+    const target = useRef(null);
+
     return (
         <div>
             <Menu />
@@ -20,7 +23,16 @@ function Header() {
                         </div>
                         <div className="col-12 col-sm-3 align-self-center">
                             <a href="#reservetable">
-                                <Button variant="warning" size="lg" block>Reserve Table</Button>
+                                <Button variant="warning" size="lg" block ref={target} onClick={() => setShow(!show)}>
+                                    Reserve Table
+                                </Button>
+                                <Overlay target={target.current} show={show} placement="right">
+                                    {(props) => (
+                                        <Tooltip id="overlay-example" {...props}>
+                                            Or Call us at  <br /><strong>+852 12345678</strong>
+                                        </Tooltip>
+                                    )}
+                                </Overlay>
                             </a>
                         </div>
                     </div>
