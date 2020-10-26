@@ -9,7 +9,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faFax, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faSkype } from '@fortawesome/free-brands-svg-icons'
-import { Card, Col, Row, Form, Table, Tabs, Tab, Accordion, Button } from 'react-bootstrap';
+import { Card, Col, Row, Form, Table, Tabs, Tab, Accordion, Button, Carousel } from 'react-bootstrap';
 
 
 function Container() {
@@ -19,6 +19,56 @@ function Container() {
                 <div>
                     <div className="margin">
                         <div className="container">
+
+                            <div className="row row-content">
+                                <div className="col">
+                                    <Carousel>
+                                        <Carousel.Item>
+                                            <img
+                                                className="d-block"
+                                                src="img/uthappizza.png"
+                                                alt="uthappizza"
+                                            />
+                                            <Carousel.Caption>
+                                                <h2 class="mt-0">Uthappizza <span className="badge badge-danger">HOT</span><span class="badge badge-pill badge-secondary">$4.99</span></h2>
+                                                <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
+                                                Italian pizza, topped with Cerignola olives, ripe vine
+                                                cherry tomatoes, Vidalia onion, Guntur chillies and
+                            Buffalo Paneer.</p>
+                                            </Carousel.Caption>
+                                        </Carousel.Item>
+                                        <Carousel.Item>
+                                            <img
+                                                className="d-block"
+                                                src="img/alberto.png"
+                                                alt="alberto"
+                                            />
+
+                                            <Carousel.Caption>
+                                                <h2 class="mt-0">Weekend grand buffet <span className="badge badge-danger">NEW</span></h2>
+                                                <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
+                                                Italian pizza, topped with Cerignola olives, ripe vine
+                                                cherry tomatoes, Vidalia onion, Guntur chillies and
+                            Buffalo Paneer.</p>
+                                            </Carousel.Caption>
+                                        </Carousel.Item>
+                                        <Carousel.Item>
+                                            <img
+                                                className="d-block"
+                                                src="img/buffet.png"
+                                                alt="buffet"
+                                            />
+                                            <Carousel.Caption>
+                                                <h2 class="mt-0">Weekend grand buffet <span className="badge badge-danger">NEW</span></h2>
+                                                <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
+                                                Italian pizza, topped with Cerignola olives, ripe vine
+                                                cherry tomatoes, Vidalia onion, Guntur chillies and
+                            Buffalo Paneer.</p>
+                                            </Carousel.Caption>
+                                        </Carousel.Item>
+                                    </Carousel>
+                                </div>
+                            </div>
                             <div className="row">
                                 <div className="col-12 col-sm-4">
                                     <h3>Our main page</h3>

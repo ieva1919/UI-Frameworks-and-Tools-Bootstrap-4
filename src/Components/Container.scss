@@ -17,3 +17,34 @@
 .margin {
     margin: 40px 0px;
 }
+
+.carousel  {
+    background-color: #9575CD;
+
+    .carousel-item {
+        height: 300px;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            min-height: 300px;
+        }
+    }
+}
+
+
+@media screen and (min-width: 1000px) {
+
+    .carousel-caption {
+        right: -10%;
+        bottom: 0;
+        top: 30px;
+    }
+
+    .carousel-item {
+        p {
+            margin: 0 120px 0 140px;
+        }
+    }
+  }
