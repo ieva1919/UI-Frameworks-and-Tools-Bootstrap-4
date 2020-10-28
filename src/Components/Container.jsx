@@ -1,37 +1,51 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Container.scss'
 import {
-    BrowserRouter as Router,
     Switch,
     Route,
     Link
 } from "react-router-dom";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPhone, faFax, faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faPhone, faFax, faEnvelope, faPauseCircle, faPlay } from '@fortawesome/free-solid-svg-icons'
 import { faSkype } from '@fortawesome/free-brands-svg-icons'
 import { Card, Col, Row, Form, Table, Tabs, Tab, Accordion, Button, Carousel } from 'react-bootstrap';
 
 
 function Container() {
+    const [show, setShow] = useState(false);
+
     return (
         <Switch>
             <Route exact path="/">
                 <div>
                     <div className="margin">
                         <div className="container">
-
+                            <div className="row">
+                                <div className="col-12 col-sm-12">
+                                    <h3>Our main page</h3>
+                                    <hr />
+                                </div >
+                            </div>
                             <div className="row row-content">
                                 <div className="col">
-                                    <Carousel>
+                                    <Carousel interval={show ? 5000 : null} controls={false}>
                                         <Carousel.Item>
                                             <img
                                                 className="d-block"
                                                 src="img/uthappizza.png"
                                                 alt="uthappizza"
                                             />
+                                            <div className="btn-group">
+                                                <Button variant="danger" type="submit" className="btn-sm" onClick={() => setShow(false)}>
+                                                    <span> <FontAwesomeIcon icon={faPauseCircle} /></span>
+                                                </Button>
+                                                <Button variant="danger" type="submit" className="btn-sm" onClick={() => setShow(true)}>
+                                                    <span> <FontAwesomeIcon icon={faPlay} /></span>
+                                                </Button>
+                                            </div>
                                             <Carousel.Caption>
-                                                <h2 class="mt-0">Uthappizza <span className="badge badge-danger">HOT</span><span class="badge badge-pill badge-secondary">$4.99</span></h2>
-                                                <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
+                                                <h2 className="mt-0">Uthappizza <span className="badge badge-danger">HOT</span><span className="badge badge-pill badge-secondary">$4.99</span></h2>
+                                                <p className="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
                                                 Italian pizza, topped with Cerignola olives, ripe vine
                                                 cherry tomatoes, Vidalia onion, Guntur chillies and
                             Buffalo Paneer.</p>
@@ -43,10 +57,17 @@ function Container() {
                                                 src="img/alberto.png"
                                                 alt="alberto"
                                             />
-
+                                            <div className="btn-group">
+                                                <Button variant="danger" type="submit" className="btn-sm" onClick={() => setShow(false)}>
+                                                    <span> <FontAwesomeIcon icon={faPauseCircle} /></span>
+                                                </Button>
+                                                <Button variant="danger" type="submit" className="btn-sm" onClick={() => setShow(true)}>
+                                                    <span> <FontAwesomeIcon icon={faPlay} /></span>
+                                                </Button>
+                                            </div>
                                             <Carousel.Caption>
-                                                <h2 class="mt-0">Weekend grand buffet <span className="badge badge-danger">NEW</span></h2>
-                                                <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
+                                                <h2 className="mt-0">Weekend grand buffet <span className="badge badge-danger">NEW</span></h2>
+                                                <p className="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
                                                 Italian pizza, topped with Cerignola olives, ripe vine
                                                 cherry tomatoes, Vidalia onion, Guntur chillies and
                             Buffalo Paneer.</p>
@@ -58,9 +79,17 @@ function Container() {
                                                 src="img/buffet.png"
                                                 alt="buffet"
                                             />
+                                            <div className="btn-group">
+                                                <Button variant="danger" type="submit" className="btn-sm" onClick={() => setShow(false)}>
+                                                    <span> <FontAwesomeIcon icon={faPauseCircle} /></span>
+                                                </Button>
+                                                <Button variant="danger" type="submit" className="btn-sm" onClick={() => setShow(true)}>
+                                                    <span> <FontAwesomeIcon icon={faPlay} /></span>
+                                                </Button>
+                                            </div>
                                             <Carousel.Caption>
-                                                <h2 class="mt-0">Weekend grand buffet <span className="badge badge-danger">NEW</span></h2>
-                                                <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
+                                                <h2 className="mt-0">Weekend grand buffet <span className="badge badge-danger">NEW</span></h2>
+                                                <p className="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
                                                 Italian pizza, topped with Cerignola olives, ripe vine
                                                 cherry tomatoes, Vidalia onion, Guntur chillies and
                             Buffalo Paneer.</p>
@@ -68,135 +97,127 @@ function Container() {
                                         </Carousel.Item>
                                     </Carousel>
                                 </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-12 col-sm-4">
-                                    <h3>Our main page</h3>
-                                    <hr />
-                                </div >
-                            </div>
-                            <div className="row row-content align-items-center">
-                                <div class="col-12 order-last col-sm-3">
-                                    <h4>Our Lipsmaking Culinary Creation</h4>
-                                </div>
-                                <div className="col-12 order-first col-sm-9">
-                                    <div className="media">
-                                        <img className="d-flex mr-3 img-thumbnail align-self-center"
-                                            src="img/uthappizza.png" alt="Uthappizza" />
-                                        <div className="media-body">
-                                            <h2 class="mt-0">Uthappizza <span className="badge badge-danger">HOT</span><span class="badge badge-pill badge-secondary">$4.99</span></h2>
-                                            <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
-                                            Italian pizza, topped with Cerignola olives, ripe vine
-                                            cherry tomatoes, Vidalia onion, Guntur chillies and
+                                <div className="row row-content align-items-center">
+                                    <div className="col-12 order-last col-sm-3">
+                                        <h4>Our Lipsmaking Culinary Creation</h4>
+                                    </div>
+                                    <div className="col-12 order-first col-sm-9">
+                                        <div className="media">
+                                            <img className="d-flex mr-3 img-thumbnail align-self-center"
+                                                src="img/uthappizza.png" alt="Uthappizza" />
+                                            <div className="media-body">
+                                                <h2 className="mt-0">Uthappizza <span className="badge badge-danger">HOT</span><span className="badge badge-pill badge-secondary">$4.99</span></h2>
+                                                <p className="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
+                                                Italian pizza, topped with Cerignola olives, ripe vine
+                                                cherry tomatoes, Vidalia onion, Guntur chillies and
                             Buffalo Paneer.</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="row row-content align-items-center">
-                                <div class="col-12 col-sm-3">
-                                    <h4>This Month's Promotions</h4>
-                                </div>
-                                <div class="col-6 col-sm-6">
-                                    <div className="media">
-                                        <div className="media-body">
-                                            <h2 class="mt-0">Weekend grand buffet <span className="badge badge-danger">NEW</span></h2>
-                                            <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
-                                            Italian pizza, topped with Cerignola olives, ripe vine
-                                            cherry tomatoes, Vidalia onion, Guntur chillies and
+                                <div className="row row-content align-items-center">
+                                    <div className="col-12 col-sm-3">
+                                        <h4>This Month's Promotions</h4>
+                                    </div>
+                                    <div className="col-6 col-sm-6">
+                                        <div className="media">
+                                            <div className="media-body">
+                                                <h2 className="mt-0">Weekend grand buffet <span className="badge badge-danger">NEW</span></h2>
+                                                <p className="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
+                                                Italian pizza, topped with Cerignola olives, ripe vine
+                                                cherry tomatoes, Vidalia onion, Guntur chillies and
                             Buffalo Paneer.</p>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-6 col-sm-3">
-                                    <img className="d-flex mr-3 img-thumbnail align-self-center"
-                                        src="img/buffet.png" alt="buffet" />
-                                </div>
-                            </div>
-                            <div className="row row-content align-items-center">
-                                <div class="col-12 col-sm-3 order-last">
-                                    <h4>Meet our culinary specialist</h4>
-                                </div>
-                                <div className="col-12 col-sm-9 order-first">
-                                    <div className="media">
+                                    <div className="col-6 col-sm-3">
                                         <img className="d-flex mr-3 img-thumbnail align-self-center"
-                                            src="img/alberto.png" alt="Alberto Somayya" />
-                                        <div className="media-body">
-                                            <h2 className="mt-0">Alberto Somayya</h2>
-                                            <h4>Executive Chef</h4>
-                                            <p className="d-none d-sm-block">Award winning three-star Michelin chef with wide
-                                            International experience having worked closely with
-                                            whos-who in the culinary world, he specializes in
-                                            creating mouthwatering Indo-Italian fusion experiences.
-                            </p>
+                                            src="img/buffet.png" alt="buffet" />
+                                    </div>
+                                </div>
+                                <div className="row row-content align-items-center">
+                                    <div className="col-12 col-sm-3 order-last">
+                                        <h4>Meet our culinary specialist</h4>
+                                    </div>
+                                    <div className="col-12 col-sm-9 order-first">
+                                        <div className="media">
+                                            <img className="d-flex mr-3 img-thumbnail align-self-center"
+                                                src="img/alberto.png" alt="Alberto Somayya" />
+                                            <div className="media-body">
+                                                <h2 className="mt-0">Alberto Somayya</h2>
+                                                <h4>Executive Chef</h4>
+                                                <p className="d-none d-sm-block">Award winning three-star Michelin chef with wide
+                                                International experience having worked closely with
+                                                whos-who in the culinary world, he specializes in
+                                                creating mouthwatering Indo-Italian fusion experiences.
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="row row-content align-items-center ">
-                                <div className="col-12">
-                                    <h2>Corporate Leadership</h2>
-                                    <br />
-                                    <Accordion defaultActiveKey="0">
-                                        <Card>
-                                            <Card.Header>
-                                                <Accordion.Toggle as={Button} variant="link" eventKey="0">
-                                                    <h3>Peter Pan <small>Chief Epicurious Officer</small></h3>
-                                                </Accordion.Toggle>
-                                            </Card.Header>
-                                            <Accordion.Collapse eventKey="0">
-                                                <Card.Body>
-                                                    <br />
-                                                    <p className="d-none d-sm-block">Our CEO, Peter, credits his hardworking East Asian immigrant parents who undertook the arduous journey to the shores of America with the intention of giving their children the best future. His mother's wizardy in the kitchen whipping up the tastiest dishes with whatever is available inexpensively at the supermarket, was his first inspiration to create the fusion cuisines for which <em>The Frying Pan</em> became well known. He brings his zeal for fusion cuisines to this restaurant, pioneering cross-cultural culinary connections.</p>
-                                                </Card.Body>
-                                            </Accordion.Collapse>
-                                        </Card>
-                                        <Card>
-                                            <Card.Header>
-                                                <Accordion.Toggle as={Button} variant="link" eventKey="1">
-                                                    <h3>Dhanasekaran Witherspoon <small>Chief Food Officer</small></h3>
-                                                </Accordion.Toggle>
-                                            </Card.Header>
-                                            <Accordion.Collapse eventKey="1">
-                                                <Card.Body>
-                                                    <br />
-                                                    <p className="d-none d-sm-block">Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established family tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him great appreciation for varieties of food sources. As he puts it in his own words, <em>Everything that runs, wins, and everything that stays, pays!</em></p>
-                                                </Card.Body>
-                                            </Accordion.Collapse>
-                                        </Card>
-                                        <Card>
-                                            <Card.Header>
-                                                <Accordion.Toggle as={Button} variant="link" eventKey="2">
-                                                    <h3>Agumbe Tang <small>Chief Taste Officer</small></h3>
-                                                </Accordion.Toggle>
-                                            </Card.Header>
-                                            <Accordion.Collapse eventKey="2">
-                                                <Card.Body>
-                                                    <br />
-                                                    <p className="d-none d-sm-block">Blessed with the most discerning gustatory sense, Agumbe, our CTO, personally ensures that every dish that we serve meets his exacting tastes. Our chefs dread the tongue lashing that ensues if their dish does not meet his exacting standards. He lives by his motto, <em>You click only if you survive my lick.</em></p>
-                                                </Card.Body>
-                                            </Accordion.Collapse>
-                                        </Card>
-                                        <Card>
-                                            <Card.Header>
-                                                <Accordion.Toggle as={Button} variant="link" eventKey="3">
-                                                    <h3>Alberto Somayya <small>Executive Chef</small></h3>
-                                                </Accordion.Toggle>
-                                            </Card.Header>
-                                            <Accordion.Collapse eventKey="3">
-                                                <Card.Body>
-                                                    <br />
-                                                    <p className="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, <em>Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!</em></p>
-                                                </Card.Body>
-                                            </Accordion.Collapse>
-                                        </Card>
-                                    </Accordion>
+                                <div className="row row-content align-items-center ">
+                                    <div className="col-12">
+                                        <h2>Corporate Leadership</h2>
+                                        <br />
+                                        <Accordion defaultActiveKey="0">
+                                            <Card>
+                                                <Card.Header>
+                                                    <Accordion.Toggle as={Button} variant="link" eventKey="0">
+                                                        <h3>Peter Pan <small>Chief Epicurious Officer</small></h3>
+                                                    </Accordion.Toggle>
+                                                </Card.Header>
+                                                <Accordion.Collapse eventKey="0">
+                                                    <Card.Body>
+                                                        <br />
+                                                        <p className="d-none d-sm-block">Our CEO, Peter, credits his hardworking East Asian immigrant parents who undertook the arduous journey to the shores of America with the intention of giving their children the best future. His mother's wizardy in the kitchen whipping up the tastiest dishes with whatever is available inexpensively at the supermarket, was his first inspiration to create the fusion cuisines for which <em>The Frying Pan</em> became well known. He brings his zeal for fusion cuisines to this restaurant, pioneering cross-cultural culinary connections.</p>
+                                                    </Card.Body>
+                                                </Accordion.Collapse>
+                                            </Card>
+                                            <Card>
+                                                <Card.Header>
+                                                    <Accordion.Toggle as={Button} variant="link" eventKey="1">
+                                                        <h3>Dhanasekaran Witherspoon <small>Chief Food Officer</small></h3>
+                                                    </Accordion.Toggle>
+                                                </Card.Header>
+                                                <Accordion.Collapse eventKey="1">
+                                                    <Card.Body>
+                                                        <br />
+                                                        <p className="d-none d-sm-block">Our CFO, Danny, as he is affectionately referred to by his colleagues, comes from a long established family tradition in farming and produce. His experiences growing up on a farm in the Australian outback gave him great appreciation for varieties of food sources. As he puts it in his own words, <em>Everything that runs, wins, and everything that stays, pays!</em></p>
+                                                    </Card.Body>
+                                                </Accordion.Collapse>
+                                            </Card>
+                                            <Card>
+                                                <Card.Header>
+                                                    <Accordion.Toggle as={Button} variant="link" eventKey="2">
+                                                        <h3>Agumbe Tang <small>Chief Taste Officer</small></h3>
+                                                    </Accordion.Toggle>
+                                                </Card.Header>
+                                                <Accordion.Collapse eventKey="2">
+                                                    <Card.Body>
+                                                        <br />
+                                                        <p className="d-none d-sm-block">Blessed with the most discerning gustatory sense, Agumbe, our CTO, personally ensures that every dish that we serve meets his exacting tastes. Our chefs dread the tongue lashing that ensues if their dish does not meet his exacting standards. He lives by his motto, <em>You click only if you survive my lick.</em></p>
+                                                    </Card.Body>
+                                                </Accordion.Collapse>
+                                            </Card>
+                                            <Card>
+                                                <Card.Header>
+                                                    <Accordion.Toggle as={Button} variant="link" eventKey="3">
+                                                        <h3>Alberto Somayya <small>Executive Chef</small></h3>
+                                                    </Accordion.Toggle>
+                                                </Card.Header>
+                                                <Accordion.Collapse eventKey="3">
+                                                    <Card.Body>
+                                                        <br />
+                                                        <p className="d-none d-sm-block">Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, <em>Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!</em></p>
+                                                    </Card.Body>
+                                                </Accordion.Collapse>
+                                            </Card>
+                                        </Accordion>
+                                    </div>
                                 </div>
-                            </div>
-                            <Card id="reservetable">
-                                <Card.Header className="warning"><strong>Reserve a Table </strong></Card.Header>
-                                <Card.Body>
-                                    <Card.Text>
+                                <Card id="reservetable">
+                                    <Card.Header className="warning"><strong>Reserve a Table </strong></Card.Header>
+                                    <Card.Body>
                                         <Form>
                                             <Form.Group as={Row} className="my-4">
                                                 <Form.Label column sm={2}>Number of Guest</Form.Label>
@@ -223,14 +244,14 @@ function Container() {
                                                 </Col>
                                             </Form.Group>
                                             <Form.Group className="row">
-                                                <div class="offset-md-2 col-md-10">
-                                                    <button type="submit" class="btn btn-primary">Reserve</button>
+                                                <div className="offset-md-2 col-md-10">
+                                                    <button type="submit" className="btn btn-primary">Reserve</button>
                                                 </div>
-                                            </Form.Group >
+                                            </Form.Group>
                                         </Form>
-                                    </Card.Text>
-                                </Card.Body>
-                            </Card>
+                                    </Card.Body>
+                                </Card>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -239,9 +260,9 @@ function Container() {
                 <div>
                     <div className="container">
                         <div className="row">
-                            <ol class="col-12 breadcrumb">
-                                <li class="breadcrumb-item"><Link to="/home">Home</Link></li>
-                                <li class="breadcrumb-item active">About Us</li>
+                            <ol className="col-12 breadcrumb">
+                                <li className="breadcrumb-item"><Link to="/home">Home</Link></li>
+                                <li className="breadcrumb-item active">About Us</li>
                             </ol>
                             <div className="col-12 col-sm-4">
                                 <h3>About Us</h3>
@@ -278,7 +299,7 @@ function Container() {
                                             {' '}
                                             You better cut the pizza in four pieces because I'm not hungry enough to eat six.{' '}
                                         </p>
-                                        <footer class="blockquote-footer">Yogi Berra,
+                                        <footer className="blockquote-footer">Yogi Berra,
                             <cite title="Source Title">The Wit and Wisdom of Yogi Berra,
                             P. Pepe, Diversion Books, 2014</cite>
                                         </footer>
@@ -396,9 +417,9 @@ function Container() {
                             </div>
                             <div className="col-12 col-sm-11 offset-sm-1">
                                 <div className="btn-group" role="group">
-                                    <a role="button" class="btn btn-primary" href="tel:+85212345678"><FontAwesomeIcon icon={faPhone} className="mr-2" /> Call</a>
-                                    <a role="button" class="btn btn-info"><FontAwesomeIcon icon={faSkype} className="mr-2" /> Skype</a>
-                                    <a role="button" class="btn btn-success" href="mailto:confusion@food.net"><FontAwesomeIcon icon={faEnvelope} className="mr-2" /> Email</a>
+                                    <a role="button" className="btn btn-primary" href="tel:+85212345678"><FontAwesomeIcon icon={faPhone} className="mr-2" /> Call</a>
+                                    <a role="button" className="btn btn-info"><FontAwesomeIcon icon={faSkype} className="mr-2" /> Skype</a>
+                                    <a role="button" className="btn btn-success" href="mailto:confusion@food.net"><FontAwesomeIcon icon={faEnvelope} className="mr-2" /> Email</a>
                                 </div>
                             </div>
                         </div>
@@ -409,42 +430,42 @@ function Container() {
                             <div className="col-12 col-md-9">
                                 <Form>
                                     <Form.Group controlId="firstname" className="row">
-                                        <Form.Label for="firstname" class="col-md-2 col-form-label">First Name</Form.Label>
-                                        <div class="col-md-10">
-                                            <Form.Control type="text" class="form-control" id="firstname" name="firstname" placeholder="First Name" />
+                                        <Form.Label for="firstname" className="col-md-2 col-form-label">First Name</Form.Label>
+                                        <div className="col-md-10">
+                                            <Form.Control type="text" className="form-control" id="firstname" name="firstname" placeholder="First Name" />
                                         </div>
                                     </Form.Group>
                                     <Form.Group controlId="lastname" className="row">
-                                        <Form.Label for="lastname" class="col-md-2 col-form-label">Last Name</Form.Label>
-                                        <div class="col-md-10">
-                                            <Form.Control type="text" class="form-control" id="lastname" name="lastname" placeholder="Last Name" />
+                                        <Form.Label for="lastname" className="col-md-2 col-form-label">Last Name</Form.Label>
+                                        <div className="col-md-10">
+                                            <Form.Control type="text" className="form-control" id="lastname" name="lastname" placeholder="Last Name" />
                                         </div>
                                     </Form.Group >
                                     <Form.Group controlId="telnum" className="row">
-                                        <Form.Label for="telnum" class="col-12 col-md-2 col-form-label">Contact Tel.</Form.Label>
-                                        <div class="col-5 col-md-3">
-                                            <Form.Control type="tel" class="form-control" id="areacode" name="areacode" placeholder="Area code" />
+                                        <Form.Label for="telnum" className="col-12 col-md-2 col-form-label">Contact Tel.</Form.Label>
+                                        <div className="col-5 col-md-3">
+                                            <Form.Control type="tel" className="form-control" id="areacode" name="areacode" placeholder="Area code" />
                                         </div>
-                                        <div class="col-7 col-md-7">
-                                            <Form.Control type="tel" class="form-control" id="telnum" name="telnum" placeholder="Tel. number" />
+                                        <div className="col-7 col-md-7">
+                                            <Form.Control type="tel" className="form-control" id="telnum" name="telnum" placeholder="Tel. number" />
                                         </div>
                                     </Form.Group>
                                     <Form.Group controlId="telnum" className="row">
-                                        <Form.Label for="emailid" class="col-md-2 col-form-label"> Email</Form.Label>
-                                        <div class="col-md-10">
-                                            <Form.Control type="email" class="form-control" id="emailid" name="emailid" placeholder="Email" />
+                                        <Form.Label for="emailid" className="col-md-2 col-form-label"> Email</Form.Label>
+                                        <div className="col-md-10">
+                                            <Form.Control type="email" className="form-control" id="emailid" name="emailid" placeholder="Email" />
                                         </div>
                                     </Form.Group>
                                     <Form.Group className="row">
-                                        <div class="col-md-6 offset-md-2">
-                                            <div class="form-check">
-                                                <Form.Control type="checkbox" class="form-check-input" name="approve" id="approve" value="" />
-                                                <Form.Label class="form-check-label" for="approve">
+                                        <div className="col-md-6 offset-md-2">
+                                            <div className="form-check">
+                                                <Form.Control type="checkbox" className="form-check-input" name="approve" id="approve" value="" />
+                                                <Form.Label className="form-check-label" for="approve">
                                                     <strong>May we contact you?</strong>
                                                 </Form.Label>
                                             </div>
                                         </div>
-                                        <div class="col-md-3 offset-md-1">
+                                        <div className="col-md-3 offset-md-1">
                                             <Form.Control as="select">
                                                 <option>Tel.</option>
                                                 <option>Email</option>
@@ -452,14 +473,14 @@ function Container() {
                                         </div>
                                     </Form.Group>
                                     <Form.Group className="row">
-                                        <Form.Label for="feedback" class="col-md-2 col-form-label">Your Feedback</Form.Label>
-                                        <div class="col-md-10">
-                                            <Form.Control as="textarea" class="form-control" id="feedback" name="feedback" rows="12"></Form.Control>
+                                        <Form.Label for="feedback" className="col-md-2 col-form-label">Your Feedback</Form.Label>
+                                        <div className="col-md-10">
+                                            <Form.Control as="textarea" className="form-control" id="feedback" name="feedback" rows="12"></Form.Control>
                                         </div>
                                     </Form.Group>
                                     <Form.Group className="row">
-                                        <div class="offset-md-2 col-md-10">
-                                            <button type="submit" class="btn btn-primary">Send Feedback</button>
+                                        <div className="offset-md-2 col-md-10">
+                                            <button type="submit" className="btn btn-primary">Send Feedback</button>
                                         </div>
                                     </Form.Group >
                                 </Form>

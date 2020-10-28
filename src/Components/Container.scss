@@ -33,6 +33,13 @@
     }
 }
 
+#carouselButton {
+    right:0px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
+}
+
 
 @media screen and (min-width: 1000px) {
 
@@ -40,6 +47,7 @@
         right: -10%;
         bottom: 0;
         top: 30px;
+        z-index: 0;
     }
 
     .carousel-item {

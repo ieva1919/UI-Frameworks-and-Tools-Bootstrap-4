@@ -20,7 +20,7 @@ function Menu() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Link to="/">
-                        <Navbar.Brand> <img src="img/logo.png" height="30" width="41" /></Navbar.Brand>
+                        <Navbar.Brand> <img src="img/logo.png" height="30" width="41" alt="logo" /></Navbar.Brand>
                     </Link>
                     <Nav >
                         <Nav.Link as={Link} to="/" className="nav-item"><FontAwesomeIcon icon={faHome} className="mr-2" />Home</Nav.Link>
@@ -55,10 +55,10 @@ function Menu() {
                                     <Form.Group>
                                         <Button variant="secondary" type="submit" className="btn-sm ml-auto" onClick={() => setShow(false)}>
                                             Cancel
-                                    </Button>
+                                        </Button>
                                         <Button variant="primary" type="submit" className="btn-sm ml-1" onClick={() => setShow(false)}>
                                             Sign in
-                                    </Button>
+                                        </Button>
                                     </Form.Group>
                                 </Form>
                             </Modal.Body>

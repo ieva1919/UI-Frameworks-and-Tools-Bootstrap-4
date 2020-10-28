@@ -18,7 +18,7 @@ function Header() {
                             <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
                         </div>
                         <div className="col-12 col-sm-3 align-self-center">
-                            <img src="img/logo.png" className="img-fluid" />
+                            <img src="img/logo.png" alt="logo" className="img-fluid" />
                         </div>
                         <div className="col-12 col-sm-3 align-self-center">
                             <a href="#reservetable">
