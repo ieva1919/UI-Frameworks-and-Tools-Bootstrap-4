@@ -32,12 +32,12 @@ function Header() {
                                 dialogClassName="modal-90w"
                                 aria-labelledby="example-custom-modal-styling-title"
                             >
-                                <Modal.Header closeButton>
+                                <Modal.Header closeButton className="reserveatble">
                                     <Modal.Title id="example-custom-modal-styling-title">
                                         Reserve a table
                         </Modal.Title>
                                 </Modal.Header>
-                                <Modal.Body>
+                                <Modal.Body className="modalbody">
                                     <Form>
                                         <Form.Group as={Row} className="my-4">
                                             <Form.Label column sm={3}>Number of Guest</Form.Label>

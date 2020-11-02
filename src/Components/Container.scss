@@ -1,7 +1,21 @@
+$lt-gray: #ddd;
+$background-dark: #512DA8;
+$background-pale: #FFC107;
+
+// Height variables
+$carousel-item-height: 300px;
+$font-size: 22px;
+
+@mixin zero-margin($pad-up-dn, $pad-left-right) {
+	margin:0px auto;
+	padding: $pad-up-dn $pad-left-right;
+}
+
+
 .row-content {
-    margin: 0px auto;
-    padding: 50px 0px 50px 0px;
+    @include zero-margin(50px,0px);
     border-bottom: 1px ridge;
+    min-height:400px;
 }
 
 .media {
@@ -9,8 +23,8 @@
 }
 
 .warning {
-    background-color: #FFC107;
-    color: white;
+    background-color: $background-pale;
+    color: $lt-gray;
     font-size: 22px;
 }
 
@@ -19,10 +33,10 @@
 }
 
 .carousel  {
-    background-color: #9575CD;
+    background:$background-dark;
 
     .carousel-item {
-        height: 300px;
+        height: $carousel-item-height;
 
         img {
             position: absolute;

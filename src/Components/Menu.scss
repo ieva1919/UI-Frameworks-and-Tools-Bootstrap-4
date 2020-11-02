@@ -1,12 +1,15 @@
+$background-dark: #512DA8;
+
+
 .navbar-dark {
-    background-color: #512DA8;
+    background-color:$background-dark;
 }
 
 
 .navbar-nav {
     
     .btn-primary {
-        background-color: #512DA8;
-        border-color: #512DA8;
+        background-color: $background-dark;
+        border-color: $background-dark;
     }
 }
