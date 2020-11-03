@@ -1,15 +1,64 @@
+$background-light: #9575CD;
 $background-dark: #512DA8;
+$background-littlelight:#D1C4E9;
+$lt-gray: #ddd;
+$font-size: 22px;
 
 
 .navbar-dark {
     background-color:$background-dark;
 }
 
+.loginmodal {
 
-.navbar-nav {
-    
     .btn-primary {
         background-color: $background-dark;
         border-color: $background-dark;
+    }
+}
+
+
+.reserveatble {
+    background-color: $background-dark;
+    font-size: $font-size;
+    color: $lt-gray;
+    border-bottom: 1px solid $background-dark;
+}
+
+.modalbody {
+    background-color: $background-littlelight;
+
+    .form-group {
+        display: flex;
+
+        input:first-child {
+            margin-right: 8px;
+        }
+    }
+}
+
+.marginlogin {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.login {
+
+    .form-control {
+        display: inline;
+        width: 31%;
+    }
+    
+    .form-check  {
+        display: inline;
+        margin-left: 8px;
+
+        input {
+            margin-top: 0.9rem;
+        }
+
+        label {
+            margin-top: 0.5rem;
+        }
     }
 }
